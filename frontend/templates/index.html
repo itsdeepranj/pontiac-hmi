@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Pontiac HMI</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="/static/style.css">
+
+    <!-- LEAFLET -->
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <!-- ROUTING -->
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css"/>
+
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+        <div id="clock">
+
+            00:00:00
+
+        </div>
+
+        <div class="status-icons">
+
+            <span>📶 LTE</span>
+            <span>📍 GPS</span>
+            <span>🎵</span>
+            <span>🔋 85%</span>
+            <span>🌡 22°C</span>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN -->
+
+    <div class="container">
+
+        <div class="maps-panel">
+
+            <!-- SEARCH -->
+
+            <div class="map-overlay">
+
+                <input
+                    type="text"
+                    id="destination"
+                    placeholder="Search destination..."
+                >
+
+                <button onclick="createRoute()">
+
+                    GO
+
+                </button>
+
+            </div>
+
+            <!-- MAP -->
+
+            <div id="map"></div>
+
+            <!-- MUSIC BAR -->
+
+            <div class="music-bar">
+
+                <img
+                    src="https://picsum.photos/100"
+                    class="mini-cover"
+                >
+
+                <div class="song-info">
+
+                    <h3 id="song-title">
+
+                        Blinding Lights
+
+                    </h3>
+
+                    <p id="artist-name">
+
+                        The Weeknd
+
+                    </p>
+
+                </div>
+
+                <div class="music-controls">
+
+                    <button>⏮</button>
+
+                    <button>▶</button>
+
+                    <button>⏭</button>
+
+                </div>
+
+            </div>
+
+            <!-- FLOATING MENU -->
+
+            <div class="floating-menu">
+
+                <button id="apps-button">
+
+                    🟩
+
+                </button>
+
+                <button id="settings-button">
+
+                    ⚙
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- OVERLAY CONTAINER -->
+
+    <div id="overlay-container"></div>
+
+    <!-- APP WINDOW -->
+
+    <div id="app-window">
+
+        <!-- TOP BAR -->
+
+        <div id="app-window-bar">
+
+            <button id="close-app">
+
+                ✕
+
+            </button>
+
+        </div>
+
+        <!-- APP FRAME -->
+
+        <iframe id="app-frame"></iframe>
+
+    </div>
+
+    <!-- LEAFLET -->
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- ROUTING -->
+
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+    <!-- JS -->
+
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
