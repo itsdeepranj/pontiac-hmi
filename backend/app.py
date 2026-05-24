@@ -121,6 +121,18 @@ def launch_spotify():
     ])
 
     return '', 204
+
+#====================
+# RADIO
+#====================
+
+@app.route('/radio')
+def radio():
+    
+    return render_template(
+        'radio.html'
+        )
+    
 #===================
 # Run the app
 #===================

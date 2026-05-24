@@ -397,3 +397,33 @@ setInterval(() => {
     ]);
 
 }, 4000);
+
+
+function playRadio() {
+
+    const player =
+        document.getElementById(
+            "radio-player"
+        );
+
+    const station =
+        document.getElementById(
+            "radio-select"
+        ).value;
+
+    player.src = station;
+
+    player.load();
+
+    player.play();
+}
+
+function pauseRadio() {
+
+    const player =
+        document.getElementById(
+            "radio-player"
+        );
+
+    player.pause();
+}
