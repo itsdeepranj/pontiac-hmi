@@ -20,7 +20,18 @@ app = Flask(
 def home():
     
     return render_template(
-        'index.html'
+        'dashboard.html'
+        )
+    
+#====================
+# Maps
+#====================
+
+@app.route('/maps')
+def maps():
+    
+    return render_template(
+        'maps.html'
         )
     
 #====================
