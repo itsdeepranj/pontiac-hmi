@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================
+         META
+    ========================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Pontiac HMI</title>
+
+    <!-- =========================
+         CORE SYSTEM CSS
+    ========================== -->
+
+    <link rel="stylesheet"
+          href="/static/css/shared.css">
+
+    <!-- =========================
+         DASHBOARD CSS
+    ========================== -->
+
+    <link rel="stylesheet"
+          href="/static/css/dashboard.css">
+
+    <!-- =========================
+         MAPS CSS
+    ========================== -->
+
+    <link rel="stylesheet"
+          href="/static/css/maps.css">
+
+    <!-- =========================
+         FLOATING APPS CSS
+    ========================== -->
+
+    <link rel="stylesheet"
+          href="/static/css/apps_floating.css">
+
+    <!-- =========================
+         SETTINGS FLOATING CSS
+    ========================== -->
+
+    <link rel="stylesheet"
+          href="/static/css/settings_floating.css">
+
+    <!-- =========================
+         LEAFLET
+    ========================== -->
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <!-- =========================
+         ROUTING
+    ========================== -->
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css"/>
+
+</head>
+
+<body>
+
+    <!-- ======================================================
+         SYSTEM LAYER
+         (Always visible across infotainment system)
+    ======================================================= -->
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <div class="top-bar">
+
+        <div id="clock">
+
+            00:00:00
+
+        </div>
+
+        <div class="status-icons">
+
+            <span>📶 LTE</span>
+            <span>📍 GPS</span>
+            <span>🎵</span>
+            <span>🔋 85%</span>
+            <span>🌡 22°C</span>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         FLOATING MENU
+    ========================== -->
+
+    <div class="floating-menu">
+
+        <button id="apps-button">
+
+            🟩
+
+        </button>
+
+        <button id="settings-button">
+
+            ⚙
+
+        </button>
+
+    </div>
+
+    <!-- ======================================================
+         MAIN APPLICATION LAYER
+    ======================================================= -->
+
+    <div class="container">
+
+        <!-- =========================
+             MAPS APPLICATION
+        ========================== -->
+
+        <div class="maps-panel">
+
+            <!-- SEARCH -->
+
+            <div class="map-overlay">
+
+                <input
+                    type="text"
+                    id="destination"
+                    placeholder="Search destination..."
+                >
+
+                <button onclick="createRoute()">
+
+                    GO
+
+                </button>
+
+            </div>
+
+            <!-- MAP -->
+
+            <div id="map"></div>
+
+        </div>
+
+    </div>
+
+    <!-- ======================================================
+         MEDIA SYSTEM LAYER
+         (Persistent across apps)
+    ======================================================= -->
+
+    <div class="music-bar">
+
+        <img
+            src="https://picsum.photos/100"
+            class="mini-cover"
+        >
+
+        <div class="song-info">
+
+            <h3 id="song-title">
+
+                Blinding Lights
+
+            </h3>
+
+            <p id="artist-name">
+
+                The Weeknd
+
+            </p>
+
+        </div>
+
+        <div class="music-controls">
+
+            <button>⏮</button>
+
+            <button>▶</button>
+
+            <button>⏭</button>
+
+        </div>
+
+    </div>
+
+    <!-- ======================================================
+         OVERLAY SYSTEM LAYER
+         (Dynamic injected overlays)
+    ======================================================= -->
+
+    <div id="overlay-container"></div>
+
+    <!-- ======================================================
+         APPLICATION HOST LAYER
+         (Apps launched inside iframe)
+    ======================================================= -->
+
+    <div id="app-window">
+
+        <!-- APP WINDOW TOP BAR -->
+
+        <div id="app-window-bar">
+
+            <button id="close-app">
+
+                ✕
+
+            </button>
+
+        </div>
+
+        <!-- APP FRAME -->
+
+        <iframe id="app-frame"></iframe>
+
+    </div>
+
+    <!-- ======================================================
+         LEAFLET
+    ======================================================= -->
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- ======================================================
+         LEAFLET ROUTING
+    ======================================================= -->
+
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+    <!-- ======================================================
+         CORE SYSTEM JS
+    ======================================================= -->
+
+    <script src="/static/java/shared.js"></script>
+
+    <!-- ======================================================
+         DASHBOARD JS
+    ======================================================= -->
+
+    <script src="/static/java/dashboard.js"></script>
+
+    <!-- ======================================================
+         MAPS JS
+    ======================================================= -->
+
+    <script src="/static/java/maps.js"></script>
+
+    <!-- ======================================================
+         FLOATING APPS JS
+    ======================================================= -->
+
+    <script src="/static/java/apps_floating.js"></script>
+
+    <!-- ======================================================
+         SETTINGS FLOATING JS
+    ======================================================= -->
+
+    <script src="/static/java/settings_floating.js"></script>
+
+</body>
+</html>

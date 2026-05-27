@@ -1,0 +1,111 @@
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    width: 100vw;
+
+    height: calc(100vh - 70px);
+
+    padding: 20px;
+}
+
+/* =========================
+   MUSIC BAR
+========================= */
+
+.music-bar {
+
+    position: absolute;
+
+    left: 20px;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    height: 90px;
+
+    background:
+        rgba(0,0,0,0.45);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    z-index: 3000;
+}
+
+/* COVER */
+
+.mini-cover {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 18px;
+
+    object-fit: cover;
+}
+
+/* SONG INFO */
+
+.song-info {
+
+    flex: 1;
+
+    margin-left: 20px;
+}
+
+.song-info h3 {
+
+    font-size: 30px;
+}
+
+.song-info p {
+
+    color: #ccc;
+
+    font-size: 20px;
+}
+
+/* CONTROLS */
+
+.music-controls {
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.music-controls button {
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+

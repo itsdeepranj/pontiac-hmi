@@ -1,0 +1,88 @@
+
+/* =========================
+   SETTINGS PANEL
+========================= */
+
+#settings-panel {
+
+    position: absolute;
+
+    top: 90px;
+
+    right: 30px;
+
+    width: 350px;
+
+    background:
+        rgba(0,0,0,0.75);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 24px;
+
+    padding: 25px;
+
+    z-index: 7000;
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+/* ACTIVE */
+
+#settings-panel.active {
+
+    display: flex;
+}
+
+/* TITLE */
+
+#settings-panel h2 {
+
+    font-size: 30px;
+}
+
+/* ROW */
+
+.setting-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+/* LABEL */
+
+.setting-row label {
+
+    font-size: 20px;
+}
+
+/* RANGE */
+
+.setting-row input[type="range"] {
+
+    width: 170px;
+}
+
+/* DUMMY BUTTON */
+
+.dummy-btn {
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: lime;
+
+    color: black;
+
+    font-weight: bold;
+}
